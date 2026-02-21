@@ -123,11 +123,6 @@ h1 {
   background: #020617;
 }
 
-.buy-btn[aria-disabled="true"] {
-  pointer-events: none;
-  opacity: 0.6;
-}
-
 .status.warning {
   color: var(--warning);
 }
