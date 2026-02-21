@@ -1,0 +1,143 @@
+:root {
+  color-scheme: light;
+  --bg: #f5f8ff;
+  --surface: #ffffff;
+  --text: #18202f;
+  --muted: #5a6680;
+  --primary: #1e63ff;
+  --primary-dark: #154ac2;
+  --success: #0d9f5c;
+  --warning: #b54708;
+  --shadow: 0 10px 24px rgba(21, 41, 86, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top right, #dce7ff 0%, var(--bg) 38%, #f8fbff 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 1.5rem;
+}
+
+h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  margin-top: 0;
+  color: var(--muted);
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.search-form input,
+.search-form button {
+  border-radius: 12px;
+  border: 1px solid #ccd7f5;
+  font-size: 1rem;
+  padding: 0.85rem 1rem;
+}
+
+.search-form input:focus {
+  outline: 2px solid #91b0ff;
+  border-color: #91b0ff;
+}
+
+.search-form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.search-form button:hover {
+  background: var(--primary-dark);
+}
+
+.status {
+  min-height: 1.25rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.results {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border: 1px solid #dce5ff;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.item-name {
+  min-height: 2.6rem;
+  margin-bottom: 0.6rem;
+  color: #283757;
+}
+
+.price {
+  color: var(--success);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.8rem;
+}
+
+.buy-btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  background: #0f172a;
+  color: #fff;
+  padding: 0.65rem 0.95rem;
+  font-weight: 600;
+}
+
+.buy-btn:hover {
+  background: #020617;
+}
+
+.buy-btn[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.status.warning {
+  color: var(--warning);
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 1.5rem auto;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+}
