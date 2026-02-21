@@ -1,0 +1,10 @@
+{
+  "name": "ai-price-comparision-tool-shopping",
+  "version": "1.0.0",
+  "description": "Amazon vs Flipkart price comparator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
