@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon vs Flipkart Price Comparator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Smart Price Comparator</h1>
+    <p class="subtitle">Search once and compare the same (or most similar) product on Amazon and Flipkart.</p>
+
+    <form id="search-form" class="search-form" autocomplete="off">
+      <input
+        id="product-input"
+        type="text"
+        placeholder="Try: iPhone 15 128GB, Sony WH-1000XM5, Air Fryer..."
+        aria-label="Search product"
+        required
+      />
+      <button type="submit">Compare Price</button>
+    </form>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="results" class="results" hidden>
+      <article class="card" id="amazon-card">
+        <h2>Amazon</h2>
+        <p class="item-name" id="amazon-name"></p>
+        <p class="price" id="amazon-price"></p>
+        <a id="amazon-link" class="buy-btn" target="_blank" rel="noopener noreferrer">Buy Now</a>
+      </article>
+
+      <article class="card" id="flipkart-card">
+        <h2>Flipkart</h2>
+        <p class="item-name" id="flipkart-name"></p>
+        <p class="price" id="flipkart-price"></p>
+        <a id="flipkart-link" class="buy-btn" target="_blank" rel="noopener noreferrer">Buy Now</a>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
